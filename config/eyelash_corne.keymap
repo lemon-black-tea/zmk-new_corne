@@ -4,6 +4,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
@@ -56,15 +57,13 @@
         Base_layer {
             display-name = "Base";
             bindings = <
-&none  &kp Q  &kp W  &kp F      &kp P        &kp B                      &none         &kp J        &kp L            &kp U         &kp Y    &kp SEMI  &none
-&none  &kp A  &kp R  &kp S      &kp T        &kp G               &none  &none  &none  &kp M        &kp N            &kp E         &kp I    &kp O     &none
-&none  &kp Z  &kp X  &kp C      &kp D        &kp V      &none           &none         &kp K        &kp H            &kp COMMA     &kp DOT  &kp FSLH  &none
-                     &lt 1 ESC  &lt 1 SPACE  &lt 3 TAB                                &lt 3 ENTER  &lt 2 BACKSPACE  &lt 1 DELETE
+&bl BL_TOG      &kp Q        &kp W         &kp F           &kp P        &kp B                                   &none         &kp J                   &kp L            &kp U         &kp Y        &kp SEMI     &none
+&bt BT_CLR_ALL  &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T   &mt LS(LA(LC(LCMD))) G           &none  &none  &none  &mt RS(RA(RC(RCMD))) M  &mt RCMD N       &mt RALT E    &mt RSHFT I  &mt RCTRL O  &none
+&none           &kp Z        &kp X         &kp C           &kp D        &kp V                   &none           &none         &kp K                   &kp H            &kp COMMA     &kp DOT      &kp FSLH     &none
+                                           &lt 1 ESC       &lt 1 SPACE  &lt 3 TAB                                             &lt 3 ENTER             &lt 2 BACKSPACE  &lt 1 DELETE
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-
-            sensor-bindings = <&inc_dec_kp N2 N1>;
         };
 
         Nav_layer {
@@ -101,6 +100,15 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
         };
     };
 };
