@@ -87,10 +87,10 @@
         Base {
             display-name = "base";
             bindings = <
-&rgb_ug RGB_TOG  &kp Q        &kp W         &kp F           &kp P        &kp B                                   &none         &kp J                   &kp L            &kp U       &kp Y        &kp SEMI     &none
-&bt BT_CLR_ALL   &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T   &mt LS(LA(LC(LCMD))) G           &none  &none  &none  &mt RS(RA(RC(RCMD))) M  &mt RCMD N       &mt RALT E  &mt RSHFT I  &mt RCTRL O  &none
-&none            &kp Z        &kp X         &kp C           &kp D        &kp V                   &none           &none         &kp K                   &kp H            &kp COMMA   &kp DOT      &kp FSLH     &none
-                                            &lt 3 ESC       &lt 1 SPACE  &lt 2 TAB                                             &kp ENTER               &lt 4 BACKSPACE  &kp DEL
+&rgb_ug RGB_TOG  &kp Q        &kp W         &kp F           &kp P        &kp B                                   &none         &kp J                   &kp L            &kp U             &kp Y              &kp GRAVE    &none
+&bt BT_CLR_ALL   &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T   &mt LS(LA(LC(LCMD))) G           &none  &none  &none  &mt RS(RA(RC(RCMD))) M  &mt RCMD N       &mt RALT E        &mt RSHFT I        &mt RCTRL O  &none
+&none            &kp Z        &kp X         &kp C           &kp D        &kp V                   &none           &none         &kp K                   &kp H            &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp FSLH     &none
+                                            &lt 6 ESC       &lt 2 SPACE  &lt 4 TAB                                             &lt 3 ENTER             &lt 1 BACKSPACE  &lt 5 DELETE
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -99,36 +99,46 @@
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none  &none  &none   &none   &none                   &none         &none        &none     &kp UP_ARROW  &none            &none  &none
-&none  &none  &none  &none   &none   &none            &none  &none  &none  &home_pgup   &kp LEFT  &kp DOWN      &kp RIGHT_ARROW  &none  &none
-&none  &none  &none  &none   &none   &none   &none           &none         &end_pgdown  &none     &none         &none            &none  &none
-                     &trans  &trans  &trans                                &trans       &trans    &trans
+&none  &none      &none      &none     &none     &none                                 &none         &none   &kp HOME     &kp UP_ARROW  &kp END          &none  &none
+&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &kp LS(LA(LC(LCMD)))           &none  &none  &none  &none   &kp LEFT     &kp DOWN      &kp RIGHT_ARROW  &none  &none
+&none  &none      &none      &none     &none     &none                 &none           &none         &none   &kp PAGE_UP  &none         &kp PAGE_DOWN    &none  &none
+                             &trans    &trans    &trans                                              &trans  &trans       &trans
             >;
-        };
-
-        Symbol {
-            bindings = <
-&none  &none      &none       &none     &none     &none                                 &none         &trans  &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&none  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &kp LS(LA(LC(LCMD)))           &none  &none  &none  &trans  &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                 &trans
-&none  &none      &none       &none     &none     &none                 &none           &none         &trans  &kp EXCLAMATION  &kp AT        &kp HASH              &trans                 &trans
-                              &trans    &trans    &trans                                              &trans  &trans           &trans
-            >;
-
-            label = "sym";
         };
 
         Number {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &kp N1  &kp N2  &kp N3  &trans  &trans
-                        &trans  &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK   &kp KP_NUMLOCK
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp PERIOD  &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp SLASH   &none
+                        &trans  &trans  &trans                                    &trans     &trans  &trans
             >;
 
             label = "num";
         };
 
-        Control {
+        SymbolL {
+            label = "symL";
+            bindings = <
+&none  &none      &kp PERCENT  &kp ASTERISK   &kp PIPE        &kp BACKSLASH                    &none         &none                 &none     &none     &none       &none              &none
+&none  &kp CARET  &kp DOLLAR   &kp AT_SIGN    &kp HASH        &kp QUESTION              &none  &none  &none  &kp RS(RA(RC(RCMD)))  &kp RCMD  &kp RALT  &kp RSHIFT  &kp RIGHT_CONTROL  &none
+&none  &none      &kp TILDE    &kp AMPERSAND  &kp UNDERSCORE  &kp EXCLAMATION  &none           &none         &none                 &none     &none     &none       &none              &none
+                               &trans         &trans          &trans                                         &trans                &trans    &trans
+            >;
+        };
+
+        SymbolR {
+            bindings = <
+&none  &none      &none       &none     &none     &none                                 &none         &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp COLON       &kp SEMICOLON      &none
+&none  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &kp LS(LA(LC(LCMD)))           &none  &none  &none  &kp MINUS  &kp LESS_THAN         &kp GREATER_THAN       &kp COMMA       &kp PERIOD         &none
+&none  &none      &none       &none     &none     &none                 &none           &none         &kp EQUAL  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp APOSTROPHE  &kp DOUBLE_QUOTES  &none
+                              &trans    &trans    &trans                                              &trans     &trans                &trans
+            >;
+
+            label = "symR";
+        };
+
+        ControlL {
             bindings = <
 &trans  &trans  &trans  &trans  &next_vup    &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &pause_mute  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -136,7 +146,18 @@
                         &trans  &trans       &trans                                    &trans  &trans  &trans
             >;
 
-            label = "control";
+            label = "controlL";
+        };
+
+        ControlR {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
+            >;
+
+            label = "controlR";
         };
     };
 };
