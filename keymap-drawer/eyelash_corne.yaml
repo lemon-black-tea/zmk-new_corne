@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   base:
-  - RGB TOG
+  - Gui+$$mdi:keyboard-space$$
   - Q
   - W
   - F
@@ -13,8 +13,8 @@ layers:
   - U
   - Y
   - {t: '`', s: '~'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - BT CLR ALL
+  - '&searchFiles_clipboard'
+  - Alt+$$mdi:keyboard-space$$
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: R, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
@@ -28,8 +28,8 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-option$$'}
   - {t: I, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: O, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&searchMenu_IME'
+  - Ctl+$$mdi:keyboard-space$$
   - Z
   - X
   - C
@@ -42,7 +42,7 @@ layers:
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&goldendict'
   - {t: '$$mdi:keyboard-esc$$', h: controlR}
   - {t: '$$mdi:keyboard-space$$', h: num}
   - {t: '$$mdi:keyboard-tab$$', h: symR}
