@@ -131,10 +131,10 @@
 
         Number {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK   &kp KP_NUMLOCK
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp N0     &kp N4  &kp N5  &kp N6  &kp PERIOD  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &kp MINUS  &kp N1  &kp N2  &kp N3  &kp SLASH   &none
-                        &trans  &trans  &trans                                    &trans     &trans  &trans
+&none  &kp LG(LS(V))  &kp LG(V)  &kp LG(LA(LS(C)))  &kp LG(LS(C))  &kp LG(C)                  &none         &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK   &kp KP_NUMLOCK
+&none  &trans         &trans     &trans             &trans         &trans              &none  &none  &none  &kp N0     &kp N4  &kp N5  &kp N6  &kp PERIOD  &none
+&none  &trans         &trans     &kp LG(LS(Z))      &kp LG(Z)      &kp LG(X)  &none           &none         &kp MINUS  &kp N1  &kp N2  &kp N3  &kp SLASH   &none
+                                 &trans             &trans         &trans                                   &trans     &trans  &trans
             >;
 
             label = "num";
