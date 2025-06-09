@@ -247,8 +247,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   controlL:
   - RGB TOG
-  - RGB HUD
-  - RGB HUI
+  - RGB EFR
+  - RGB EFF
   - $$mdi:skip-next$$
   - $$mdi:volume-high$$
   - $$mdi:brightness-5$$
@@ -260,8 +260,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
-  - RGB SAD
-  - RGB SAI
+  - RGB BRD
+  - RGB BRI
   - PLAY PAUSE
   - $$mdi:volume-off$$
   - Ctl+Gui+Q
@@ -275,8 +275,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
-  - RGB BRD
-  - RGB BRI
+  - '&d_hui_sat'
+  - '&i_hui_sat'
   - $$mdi:skip-previous$$
   - $$mdi:volume-low$$
   - $$mdi:brightness-7$$
