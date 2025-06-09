@@ -43,12 +43,12 @@ layers:
   - .
   - {t: ;, s: ':'}
   - '&goldendict'
-  - {t: '$$mdi:keyboard-tab$$', h: controlR}
-  - {t: '$$mdi:keyboard-space$$', h: num}
-  - {t: RETURN, h: symR}
-  - {t: '$$mdi:keyboard-esc$$', h: symL}
-  - {t: '$$mdi:backspace$$', h: nav}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: controlL}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: controlR}
+  - {t: '$$mdi:backspace$$', h: num}
+  - {t: '$$mdi:keyboard-esc$$', h: symR}
+  - {t: RETURN, h: symL}
+  - {t: '$$mdi:keyboard-space$$', h: nav}
+  - {t: '$$mdi:keyboard-tab$$', h: controlL}
   nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -111,7 +111,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - '*'
-  - KP NUMLOCK
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
