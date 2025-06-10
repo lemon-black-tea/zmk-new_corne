@@ -136,10 +136,10 @@
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none      &none      &none     &none     &none                                         &none         &none             &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)    &none            &none
-&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &kp LG(LA(LS(LEFT_CONTROL)))           &none  &none  &none  &kp LS(LG(HOME))  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &kp LS(LG(END))  &none
-&none  &none      &none      &none     &none     &none                         &none           &none         &none             &kp LG(LEFT)  &none         &kp LG(RIGHT)    &none            &none
-                             &trans    &trans    &trans                                                      &trans            &trans        &trans
+&none  &none      &none      &none     &none     &none                                         &none         &none         &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)    &none        &none
+&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &kp LG(LA(LS(LEFT_CONTROL)))           &none  &none  &none  &kp LG(HOME)  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &kp LG(END)  &none
+&none  &none      &none      &none     &none     &none                         &none           &none         &none         &kp LG(LEFT)  &none         &kp LG(RIGHT)    &none        &none
+                             &trans    &trans    &trans                                                      &trans        &trans        &trans
             >;
         };
 
