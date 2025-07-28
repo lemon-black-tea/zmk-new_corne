@@ -12,7 +12,7 @@ layers:
   - L
   - U
   - Y
-  - GLOBE
+  - AC NEXT KEYBOARD LAYOUT SELECT
   - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
@@ -45,11 +45,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backspace-reverse-outline$$', h: numpad}
   - {t: '$$mdi:keyboard-tab$$', h: one-hand}
-  - {t: '$$mdi:keyboard-esc$$', h: Num-sym}
+  - {t: '$$mdi:keyboard-esc$$', h: num-sym}
   - {t: RETURN, h: nav}
   - {t: '$$mdi:keyboard-space$$', h: sym}
   - {t: '$$mdi:backspace$$', h: control}
-  Num-sym:
+  num-sym:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '4', s: $}
   - {t: '3', s: '#'}
