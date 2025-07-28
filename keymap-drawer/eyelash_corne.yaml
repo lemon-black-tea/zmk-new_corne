@@ -12,7 +12,7 @@ layers:
   - L
   - U
   - Y
-  - <
+  - GLOBE
   - '&searchFiles_clipboard'
   - {t: sym, h: toggle}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
@@ -41,15 +41,15 @@ layers:
   - H
   - {t: ',', s: <}
   - .
-  - {t: ;, s: ':'}
+  - <
   - '&goldendict'
-  - {t: '$$mdi:backspace-reverse-outline$$', h: num-row}
-  - {t: '$$mdi:backspace$$', h: sym}
-  - {t: '$$mdi:keyboard-esc$$', h: symR}
-  - {t: RETURN, h: symR}
-  - {t: '$$mdi:keyboard-space$$', h: nav}
-  - {t: '$$mdi:keyboard-tab$$', h: num-row}
-  num-row:
+  - {t: '$$mdi:backspace-reverse-outline$$', h: nav}
+  - {t: '$$mdi:keyboard-tab$$', h: sym}
+  - {t: '$$mdi:keyboard-esc$$', h: nav}
+  - {t: RETURN, h: Num-sym}
+  - {t: '$$mdi:keyboard-space$$', h: sym}
+  - {t: '$$mdi:backspace$$', h: nav}
+  Num-sym:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '4', s: $}
   - {t: '3', s: '#'}
@@ -92,39 +92,39 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   sym:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ^
-  - '~'
-  - {t: '=', s: +}
-  - _
-  - '*'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '#'
   - '@'
   - '&'
-  - $
   - '%'
+  - ^
+  - '*'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - _
+  - $
+  - '#'
+  - '|'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: <, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: ':', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ':', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '=', h: '$$mdi:apple-keyboard-option$$', s: +}
   - {t: +, h: LGUI}
-  - {t: ',', h: 'Gui+Alt+Sft+$$mdi:apple-keyboard-control$$', s: <}
+  - {t: '"', h: 'Gui+Alt+Sft+$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: ., h: 'Gui+AltGr+Sft+$$mdi:apple-keyboard-control$$'}
+  - {t: '`', h: 'Gui+AltGr+Sft+$$mdi:apple-keyboard-control$$', s: '~'}
   - {t: '-', h: RGUI, s: _}
-  - {t: ;, h: '$$mdi:apple-keyboard-option$$', s: ':'}
-  - {t: '"', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '~', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: ;, h: '$$mdi:apple-keyboard-shift$$', s: ':'}
   - {t: '!', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -145,7 +145,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -156,9 +156,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Alt+$$mdi:arrow-left-bold$$
+  - {t: '[', s: '{'}
   - $$mdi:arrow-up-bold$$
-  - Alt+$$mdi:arrow-right-bold$$
+  - {t: ']', s: '}'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -170,11 +170,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+HOME
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - Gui+END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -185,17 +184,18 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:arrow-left-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:arrow-right-bold$$
+  - HOME
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   numpad:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Gui+Sft+V
@@ -245,56 +245,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  symR:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgUp
-  - HOME
-  - {t: 'Gui+[', s: 'Gui+{'}
-  - Gui+Sft+T
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - +
-  - (
-  - )
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
-  - $$mdi:apple-keyboard-shift$$
-  - $$mdi:apple-keyboard-option$$
-  - $$mdi:apple-keyboard-command$$
-  - Gui+Alt+Sft+$$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '-', s: _}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: /, s: '?'}
-  - {t: \, s: '|'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - PgDn
-  - END
-  - {t: 'Gui+]', s: 'Gui+}'}
-  - Gui+Sft+H
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - _
-  - '{'
-  - '}'
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
-  - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  controlL:
+  control:
   - RGB TOG
   - RGB EFR
   - RGB EFF
@@ -337,55 +288,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  controlR:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+Sft+1
-  - Ctl+Sft+4
-  - Meh+$$mdi:arrow-left-bold$$
-  - Meh+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+Sft+2
-  - Ctl+Sft+5
-  - Meh+M
-  - Meh+C
-  - Gui+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Ctl+Sft+3
-  - Ctl+Sft+6
-  - Meh+F
-  - Gui+Q
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
