@@ -118,41 +118,10 @@
 &kp LG(SPACE)  &kp Q        &kp W         &kp F           &kp P       &kp B                                           &none         &kp J                            &kp L        &kp U            &kp Y        &kp LA(LC(SPACE))  &kp F12
 &none          &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T  &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N   &mt RALT E       &mt RSHFT I  &mt RCTRL O        &none
 &none          &kp Z        &kp X         &kp C           &kp D       &kp V                           &none           &none         &kp K                            &kp H        &kp COMMA        &kp PERIOD   &kp APOSTROPHE     &none
-                                          &lt 5 DELETE    &lt 4 TAB   &lt 1 ESCAPE                                                  &lt 3 RETURN                     &lt 2 SPACE  &lt 6 BACKSPACE
+                                          &lt 3 DELETE    &lt 2 TAB   &lt 1 ESCAPE                                                  &lt 4 RETURN                     &lt 5 SPACE  &lt 6 BACKSPACE
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-        };
-
-        Num-sym {
-            bindings = <
-&none  &kp N4           &kp N3               &kp N2               &kp N1                 &kp N0                                      &none         &kp N5                      &kp N6                  &kp N7                &kp N8                  &kp N9               &none
-&none  &mt LCTRL SLASH  &mt LSHFT LESS_THAN  &mt LALT LEFT_BRACE  &mt LGUI LEFT_BRACKET  &mt LG(LA(LS(LCTRL))) LPAR           &none  &none  &none  &mt RG(RA(RS(RCTRL))) RPAR  &mt RGUI RIGHT_BRACKET  &mt RALT RIGHT_BRACE  &mt RSHFT GREATER_THAN  &mt RCTRL BACKSLASH  &none
-&none  &none            &none                &none                &none                  &none                       &none           &none         &none                       &none                   &none                 &none                   &none                &none
-                                             &trans               &trans                 &trans                                                    &trans                      &trans                  &trans
-            >;
-
-            label = "num-sym";
-        };
-
-        Symbol {
-            label = "sym";
-            bindings = <
-&none  &kp AT_SIGN         &kp AMPERSAND     &kp PERCENT     &kp CARET      &kp ASTERISK                                         &none         &kp UNDERSCORE               &kp DOLLAR      &kp HASH        &kp PIPE              &none                  &none
-&none  &mt LCTRL QUESTION  &mt LSHIFT COLON  &mt LALT EQUAL  &mt LGUI PLUS  &mt LG(LA(LS(LCTRL))) DOUBLE_QUOTES           &none  &none  &none  &mt RG(RA(RS(RCTRL))) GRAVE  &mt RGUI MINUS  &mt RALT TILDE  &mt RSHIFT SEMICOLON  &mt RCTRL EXCLAMATION  &none
-&none  &none               &none             &none           &none          &none                                &none           &none         &none                        &none           &none           &none                 &none                  &none
-                                             &trans          &trans         &trans                                                             &trans                       &trans          &trans
-            >;
-        };
-
-        Navigation {
-            display-name = "nav";
-            bindings = <
-&none  &none      &none      &none     &none     &none                                         &none         &none   &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &none  &none
-&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &kp LG(LA(LS(LEFT_CONTROL)))           &none  &none  &none  &none   &kp LEFT          &kp DOWN      &kp RIGHT          &none  &none
-&none  &none      &none      &none     &none     &none                         &none           &none         &none   &kp HOME          &none         &kp END            &none  &none
-                             &trans    &trans    &trans                                                      &trans  &trans            &trans
-            >;
         };
 
         One-hand-ops {
@@ -165,6 +134,16 @@
             >;
         };
 
+        Navigation {
+            display-name = "nav";
+            bindings = <
+&none  &none      &none      &none     &none     &none                   &none         &none   &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &none  &none
+&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &none            &none  &none  &none  &none   &kp LEFT          &kp DOWN      &kp RIGHT          &none  &none
+&none  &none      &none      &none     &none     &none   &none           &none         &none   &kp HOME          &none         &kp END            &none  &none
+                             &trans    &trans    &trans                                &trans  &trans            &trans
+            >;
+        };
+
         Numpad {
             bindings = <
 &none  &none  &none  &none   &none   &none                   &none         &kp PLUS   &kp N7  &kp N8  &kp N9  &kp ASTRK   &none
@@ -174,6 +153,27 @@
             >;
 
             label = "numpad";
+        };
+
+        Symbol {
+            label = "sym";
+            bindings = <
+&none  &kp AT_SIGN         &kp AMPERSAND     &kp PERCENT     &kp CARET      &kp ASTERISK                                         &none         &kp UNDERSCORE               &kp DOLLAR      &kp HASH        &kp PIPE              &none                  &none
+&none  &mt LCTRL QUESTION  &mt LSHIFT COLON  &mt LALT EQUAL  &mt LGUI PLUS  &mt LG(LA(LS(LCTRL))) DOUBLE_QUOTES           &none  &none  &none  &mt RG(RA(RS(RCTRL))) GRAVE  &mt RGUI MINUS  &mt RALT TILDE  &mt RSHIFT SEMICOLON  &mt RCTRL EXCLAMATION  &none
+&none  &none               &none             &none           &none          &none                                &none           &none         &none                        &none           &none           &none                 &none                  &none
+                                             &trans          &trans         &trans                                                             &trans                       &trans          &trans
+            >;
+        };
+
+        Num-sym {
+            bindings = <
+&none  &kp N4           &kp N3               &kp N2               &kp N1                 &kp N0                                      &none         &kp N5                      &kp N6                  &kp N7                &kp N8                  &kp N9               &none
+&none  &mt LCTRL SLASH  &mt LSHFT LESS_THAN  &mt LALT LEFT_BRACE  &mt LGUI LEFT_BRACKET  &mt LG(LA(LS(LCTRL))) LPAR           &none  &none  &none  &mt RG(RA(RS(RCTRL))) RPAR  &mt RGUI RIGHT_BRACKET  &mt RALT RIGHT_BRACE  &mt RSHFT GREATER_THAN  &mt RCTRL BACKSLASH  &none
+&none  &none            &none                &none                &none                  &none                       &none           &none         &none                       &none                   &none                 &none                   &none                &none
+                                             &trans               &trans                 &trans                                                    &trans                      &trans                  &trans
+            >;
+
+            label = "num-sym";
         };
 
         Control {
