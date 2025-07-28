@@ -124,16 +124,16 @@
         Base {
             display-name = "base";
             bindings = <
-&kp LG(SPACE)  &kp Q        &kp W         &kp F           &kp P            &kp B                                           &none         &kp J                            &kp L        &kp U       &kp Y        &kp APOSTROPHE  &searchFiles_clipboard
-&tog 2         &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T       &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N   &mt RALT E  &mt RSHFT I  &mt RCTRL O     &searchMenu_IME
-&kp LC(SPACE)  &kp Z        &kp X         &kp C           &kp D            &kp V                           &none           &none         &kp K                            &kp H        &kp COMMA   &kp PERIOD   &kp SEMI        &goldendict
-                                          &lt 1 DELETE    &lt 2 BACKSPACE  &lt 5 ESCAPE                                                  &lt 5 RETURN                     &lt 3 SPACE  &lt 1 TAB
+&kp LG(SPACE)  &kp Q        &kp W         &kp F           &kp P       &kp B                                           &none         &kp J                            &kp L        &kp U            &kp Y        &kp GLOBE       &searchFiles_clipboard
+&tog 2         &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T  &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N   &mt RALT E       &mt RSHFT I  &mt RCTRL O     &searchMenu_IME
+&kp LC(SPACE)  &kp Z        &kp X         &kp C           &kp D       &kp V                           &none           &none         &kp K                            &kp H        &kp COMMA        &kp PERIOD   &kp APOSTROPHE  &goldendict
+                                          &lt 3 DELETE    &lt 2 TAB   &lt 3 ESCAPE                                                  &lt 1 RETURN                     &lt 2 SPACE  &lt 3 BACKSPACE
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        num-row {
+        Num-sym {
             bindings = <
 &trans  &kp N4           &kp N3               &kp N2               &kp N1                 &kp N0                                        &trans          &kp N5                      &kp N6                  &kp N7                &kp N8                  &kp N9               &trans
 &trans  &mt LCTRL SLASH  &mt LSHFT LESS_THAN  &mt LALT LEFT_BRACE  &mt LGUI LEFT_BRACKET  &mt LG(LA(LS(LCTRL))) LPAR            &trans  &trans  &trans  &mt RG(RA(RS(RCTRL))) RPAR  &mt RGUI RIGHT_BRACKET  &mt RALT RIGHT_BRACE  &mt RSHFT GREATER_THAN  &mt RCTRL BACKSLASH  &trans
@@ -145,20 +145,20 @@
         Symbol {
             label = "sym";
             bindings = <
-&none  &kp CARET           &kp TILDE              &kp EQUAL       &kp UNDERSCORE  &kp ASTERISK                                 &none         &kp HASH                      &kp AT          &kp AMPS            &kp DOLLAR                &kp PERCENT            &none
-&none  &mt LCTRL QUESTION  &mt LSHIFT APOSTROPHE  &mt LALT COLON  &mt LGUI PLUS   &mt LG(LA(LS(LCTRL))) COMMA           &none  &none  &none  &mt RG(RA(RS(RCTRL))) PERIOD  &mt RGUI MINUS  &mt RALT SEMICOLON  &mt RSHIFT DOUBLE_QUOTES  &mt RCTRL EXCLAMATION  &none
-&none  &none               &none                  &none           &none           &none                        &none           &none         &none                         &none           &none               &none                     &none                  &none
-                                                  &trans          &trans          &trans                                                     &trans                        &trans          &trans
+&none  &kp AT_SIGN         &kp AMPERSAND     &kp PERCENT     &kp CARET      &kp ASTERISK                                         &none         &kp UNDERSCORE               &kp DOLLAR      &kp HASH        &kp PIPE              &none                  &none
+&none  &mt LCTRL QUESTION  &mt LSHIFT COLON  &mt LALT EQUAL  &mt LGUI PLUS  &mt LG(LA(LS(LCTRL))) DOUBLE_QUOTES           &none  &none  &none  &mt RG(RA(RS(RCTRL))) GRAVE  &mt RGUI MINUS  &mt RALT TILDE  &mt RSHIFT SEMICOLON  &mt RCTRL EXCLAMATION  &none
+&none  &none               &none             &none           &none          &none                                &none           &none         &none                        &none           &none           &none                 &none                  &none
+                                             &trans          &trans         &trans                                                             &trans                       &trans          &trans
             >;
         };
 
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none      &none      &none     &none     &none                                         &none         &none         &kp LA(LEFT)  &kp UP_ARROW  &kp LA(RIGHT)    &none        &none
-&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &kp LG(LA(LS(LEFT_CONTROL)))           &none  &none  &none  &kp LG(HOME)  &kp LEFT      &kp DOWN      &kp RIGHT_ARROW  &kp LG(END)  &none
-&none  &none      &none      &none     &none     &none                         &none           &none         &none         &kp LG(LEFT)  &none         &kp LG(RIGHT)    &none        &none
-                             &trans    &trans    &trans                                                      &trans        &trans        &trans
+&none  &none      &none      &none     &none     &none                                         &none         &none   &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &none  &none
+&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &kp LG(LA(LS(LEFT_CONTROL)))           &none  &none  &none  &none   &kp LEFT          &kp DOWN      &kp RIGHT          &none  &none
+&none  &none      &none      &none     &none     &none                         &none           &none         &none   &kp HOME          &none         &kp END            &none  &none
+                             &trans    &trans    &trans                                                      &trans  &trans            &trans
             >;
         };
 
@@ -173,18 +173,7 @@
             label = "numpad";
         };
 
-        SymbolR {
-            bindings = <
-&none  &none      &kp PAGE_UP    &kp HOME  &kp LG(LEFT_BRACKET)   &kp LG(LS(T))                                 &none         &kp PLUS        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none      &none          &none
-&none  &kp LCTRL  &kp LSHIFT     &kp LALT  &kp LCMD               &kp LG(LA(LS(LEFT_CONTROL)))           &none  &none  &none  &kp MINUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SLASH  &kp BACKSLASH  &none
-&none  &none      &kp PAGE_DOWN  &kp END   &kp LG(RIGHT_BRACKET)  &kp LG(LS(H))                 &none           &none         &kp UNDERSCORE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none      &none          &none
-                                 &trans    &trans                 &trans                                                      &trans          &trans                &trans
-            >;
-
-            label = "symR";
-        };
-
-        ControlL {
+        Control {
             bindings = <
 &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &kp C_NEXT        &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC                  &none         &none   &none   &none   &none  &none  &none
 &bt BT_CLR_ALL   &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp C_PLAY_PAUSE  &kp C_MUTE         &kp LC(LG(Q))                  &none  &none  &none  &none   &none   &none   &none  &none  &none
@@ -192,18 +181,7 @@
                                                    &trans            &trans             &trans                                              &trans  &trans  &trans
             >;
 
-            label = "controlL";
-        };
-
-        ControlR {
-            bindings = <
-&none  &none  &none  &none   &none   &none                   &none         &kp LC(LS(NUMBER_1))  &kp LC(LS(NUMBER_4))  &kp LA(LS(LC(LEFT_ARROW)))  &kp LA(LS(LC(RIGHT_ARROW)))  &none        &none
-&none  &none  &none  &none   &none   &none            &none  &none  &none  &kp LC(LS(NUMBER_2))  &kp LC(LS(NUMBER_5))  &kp LA(LS(LC(M)))           &kp LA(LS(LC(C)))            &kp LG(TAB)  &none
-&none  &none  &none  &none   &none   &none   &none           &none         &kp LC(LS(NUMBER_3))  &kp LC(LS(NUMBER_6))  &kp LA(LS(LC(F)))           &kp LG(Q)                    &none        &bootloader
-                     &trans  &trans  &trans                                &trans                &trans                &trans
-            >;
-
-            label = "controlR";
+            label = "control";
         };
     };
 };
