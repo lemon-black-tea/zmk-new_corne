@@ -12,7 +12,7 @@ layers:
   - L
   - U
   - Y
-  - AC NEXT KEYBOARD LAYOUT SELECT
+  - Alt+Ctl+$$mdi:keyboard-space$$
   - F12
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
