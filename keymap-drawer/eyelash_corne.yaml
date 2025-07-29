@@ -295,12 +295,12 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   control:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB BRI
+  - RGB TOG
+  - RGB EFR
+  - RGB EFF
+  - $$mdi:skip-previous$$
+  - PLAY PAUSE
   - $$mdi:skip-next$$
-  - $$mdi:volume-high$$
-  - $$mdi:brightness-5$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -309,11 +309,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB TOG
-  - PLAY PAUSE
+  - RGB BRD
+  - RGB BRI
+  - $$mdi:volume-low$$
   - $$mdi:volume-off$$
-  - Ctl+Gui+Q
+  - $$mdi:volume-high$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -324,11 +324,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - RGB BRD
-  - $$mdi:skip-previous$$
-  - $$mdi:volume-low$$
+  - '&ug_hue_sat_dn'
+  - '&ug_hue_sat_up'
   - $$mdi:brightness-7$$
+  - Gui+Ctl+Q
+  - $$mdi:brightness-5$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
