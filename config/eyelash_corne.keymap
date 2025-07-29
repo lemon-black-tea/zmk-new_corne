@@ -137,10 +137,10 @@
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none      &none      &none     &none     &none                   &none         &none   &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &none  &none
-&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &none            &none  &none  &none  &none   &kp LEFT          &kp DOWN      &kp RIGHT          &none  &none
-&none  &none      &none      &none     &none     &none   &none           &none         &none   &kp HOME          &none         &kp END            &none  &none
-                             &trans    &trans    &trans                                &trans  &trans            &trans
+&none  &none      &none      &none     &none     &none                   &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
+&none  &kp LCTRL  &kp LSHFT  &kp LALT  &kp LCMD  &none            &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
+&none  &none      &none      &none     &none     &none   &none           &none         &none     &none             &none         &none              &none          &none
+                             &trans    &trans    &trans                                &trans    &trans            &trans
             >;
         };
 
@@ -178,10 +178,10 @@
 
         Control {
             bindings = <
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &kp C_NEXT        &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC                  &none         &none   &none   &none   &none  &none  &none
-&bt BT_CLR_ALL   &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &kp C_PLAY_PAUSE  &kp C_MUTE         &kp LC(LG(Q))                  &none  &none  &none  &none   &none   &none   &none  &none  &none
-&bootloader      &d_hui_sat       &i_hui_sat       &kp C_PREV        &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none           &none         &none   &none   &none   &none  &none  &bootloader
-                                                   &trans            &trans             &trans                                              &trans  &trans  &trans
+&none           &none  &rgb_ug RGB_BRI  &kp C_NEXT        &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC                  &none         &none   &none   &none   &none  &none  &none
+&bt BT_CLR_ALL  &none  &rgb_ug RGB_TOG  &kp C_PLAY_PAUSE  &kp C_MUTE         &kp LC(LG(Q))                  &none  &none  &none  &none   &none   &none   &none  &none  &none
+&bootloader     &none  &rgb_ug RGB_BRD  &kp C_PREV        &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &none           &none         &none   &none   &none   &none  &none  &bootloader
+                                        &trans            &trans             &trans                                              &trans  &trans  &trans
             >;
 
             label = "control";
