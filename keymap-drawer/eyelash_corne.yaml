@@ -106,11 +106,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
   - {t: '[', s: '{'}
   - $$mdi:arrow-up-bold$$
   - {t: ']', s: '}'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-control$$
@@ -121,10 +121,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - END
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
+  - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -136,9 +137,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - HOME
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - END
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -295,9 +295,9 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   control:
-  - RGB TOG
-  - RGB EFR
-  - RGB EFF
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB BRI
   - $$mdi:skip-next$$
   - $$mdi:volume-high$$
   - $$mdi:brightness-5$$
@@ -309,8 +309,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
-  - RGB BRD
-  - RGB BRI
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB TOG
   - PLAY PAUSE
   - $$mdi:volume-off$$
   - Ctl+Gui+Q
@@ -324,8 +324,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:progress-download$$
-  - '&d_hui_sat'
-  - '&i_hui_sat'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB BRD
   - $$mdi:skip-previous$$
   - $$mdi:volume-low$$
   - $$mdi:brightness-7$$
