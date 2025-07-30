@@ -43,11 +43,11 @@ layers:
   - .
   - <
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:backspace$$', h: numpad}
+  - {t: '$$mdi:keyboard-esc$$', h: numpad}
   - {t: '$$mdi:keyboard-space$$', h: one-hand}
-  - {t: RETURN, h: nav}
-  - {t: '$$mdi:keyboard-esc$$', h: sym}
-  - {t: '$$mdi:keyboard-tab$$', h: num-sym}
+  - {t: '$$mdi:keyboard-tab$$', h: nav}
+  - {t: RETURN, h: sym}
+  - {t: '$$mdi:backspace$$', h: num-sym}
   - {t: '$$mdi:backspace-reverse-outline$$', h: control}
   nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
