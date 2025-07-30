@@ -124,16 +124,6 @@
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        One-hand-ops {
-            label = "one-hand";
-            bindings = <
-&none  &none          &none      &kp LG(LA(C))  &kp LG(LA(V))  &none                   &none         &none   &none   &none   &none  &none  &none
-&none  &kp LG(Z)      &kp LG(X)  &kp LG(C)      &kp LG(V)      &none            &none  &none  &none  &none   &none   &none   &none  &none  &none
-&none  &kp LG(LS(Z))  &none      &kp LG(LS(C))  &kp LG(LS(V))  &none   &none           &none         &none   &none   &none   &none  &none  &none
-                                 &trans         &trans         &trans                                &trans  &trans  &trans
-            >;
-        };
-
         Navigation {
             display-name = "nav";
             bindings = <
@@ -141,6 +131,16 @@
 &none  &kp LCTRL  &kp LSHFT  &kp LALT      &kp LCMD      &none            &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
 &none  &none      &none      &kp LS(LALT)  &kp LS(LCMD)  &none   &none           &none         &none     &none             &none         &none              &none          &none
                              &trans        &trans        &trans                                &trans    &trans            &trans
+            >;
+        };
+
+        One-hand-ops {
+            label = "one-hand";
+            bindings = <
+&none  &none          &none      &kp LG(LA(C))  &kp LG(LA(V))  &none                   &none         &none   &none   &none   &none  &none  &none
+&none  &kp LG(Z)      &kp LG(X)  &kp LG(C)      &kp LG(V)      &none            &none  &none  &none  &none   &none   &none   &none  &none  &none
+&none  &kp LG(LS(Z))  &none      &kp LG(LS(C))  &kp LG(LS(V))  &none   &none           &none         &none   &none   &none   &none  &none  &none
+                                 &trans         &trans         &trans                                &trans  &trans  &trans
             >;
         };
 
