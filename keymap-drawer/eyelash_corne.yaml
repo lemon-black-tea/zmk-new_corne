@@ -246,7 +246,7 @@ layers:
   - '0'
   - {t: ug, h: toggle, type: held alternate}
   ug:
-  - {t: ug, h: toggle}
+  - RGB TOG
   - RGB SPI
   - RGB SAI
   - RGB HUI
@@ -259,7 +259,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ug, h: toggle}
   - RGB SPD
   - RGB SAD
   - RGB HUD
@@ -294,3 +294,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+combos:
+- p: [44, 45]
+  k: RGB TOG
+  l: [ug]
