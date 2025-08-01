@@ -127,20 +127,20 @@
             bindings = <
 &none  &kp Q        &kp W         &kp F           &kp P        &kp B                                           &none         &kp J                            &kp L            &kp U         &kp Y        &kp SEMICOLON     &none
 &none  &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T   &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N       &mt RALT E    &mt RSHFT I  &mt RCTRL O       &none
-&none  &lt 1 Z      &kp X         &kp C           &kp D        &kp V                           &none           &none         &kp K                            &kp H            &kp COMMA     &kp PERIOD   &lt 1 APOSTROPHE  &none
-                                  &lt 4 ESCAPE    &lt 2 SPACE  &lt 3 TAB                                                     &lt 3 RETURN                     &lt 2 BACKSPACE  &lt 4 DELETE
+&none  &lt 3 Z      &kp X         &kp C           &kp D        &kp V                           &none           &none         &kp K                            &kp H            &kp COMMA     &kp PERIOD   &lt 3 APOSTROPHE  &none
+                                  &lt 4 ESCAPE    &lt 2 SPACE  &lt 1 TAB                                                     &lt 1 RETURN                     &lt 2 BACKSPACE  &lt 4 DELETE
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        Symbol {
-            label = "sym";
+        Navigation {
+            display-name = "nav";
             bindings = <
-&none  &kp AMPERSAND       &kp PERCENT       &kp CARET         &kp ASTERISK   &none                  &none         &none  &kp UNDERSCORE  &kp DOLLAR      &kp HASH          &kp PIPE               &none
-&none  &mt LCTRL QUESTION  &mt LSHIFT EQUAL  &mt LALT AT_SIGN  &mt LGUI PLUS  &none           &none  &none  &none  &none  &mt RGUI MINUS  &mt RALT GRAVE  &mt RSHIFT TILDE  &mt RCTRL EXCLAMATION  &none
-&none  &none               &none             &none             &none          &none  &none           &none         &none  &none           &none           &none             &none                  &none
-                                             &none             &kp SPACE      &none                                &none  &none           &none
+&none  &none            &none            &kp LG(LA(C))           &kp LG(LA(V))           &none                  &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
+&none  &mt LCTRL LG(Z)  &mt LSHFT LG(X)  &mt LALT LG(C)          &mt LCMD LG(V)          &none           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
+&none  &kp LG(LS(Z))    &none            &mt LS(LALT) LG(LS(C))  &mt LS(LCMD) LG(LS(V))  &none  &none           &none         &none     &none             &none         &none              &none          &none
+                                         &none                   &none                   &none                                &none     &none             &none
             >;
         };
 
@@ -155,13 +155,13 @@
             label = "numS";
         };
 
-        Navigation {
-            display-name = "nav";
+        Symbol {
+            label = "sym";
             bindings = <
-&none  &none            &none            &kp LG(LA(C))           &kp LG(LA(V))           &none                  &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
-&none  &mt LCTRL LG(Z)  &mt LSHFT LG(X)  &mt LALT LG(C)          &mt LCMD LG(V)          &none           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
-&none  &kp LG(LS(Z))    &none            &mt LS(LALT) LG(LS(C))  &mt LS(LCMD) LG(LS(V))  &none  &none           &none         &none     &none             &none         &none              &none          &none
-                                         &none                   &none                   &none                                &none     &none             &none
+&none  &kp AMPERSAND       &kp PERCENT       &kp CARET         &kp ASTERISK   &none                  &none         &none  &kp UNDERSCORE  &kp DOLLAR      &kp HASH          &kp PIPE               &none
+&none  &mt LCTRL QUESTION  &mt LSHIFT EQUAL  &mt LALT AT_SIGN  &mt LGUI PLUS  &none           &none  &none  &none  &none  &mt RGUI MINUS  &mt RALT GRAVE  &mt RSHIFT TILDE  &mt RCTRL EXCLAMATION  &none
+&none  &none               &none             &none             &none          &none  &none           &none         &none  &none           &none           &none             &none                  &none
+                                             &none             &kp SPACE      &none                                &none  &none           &none
             >;
         };
 
