@@ -137,10 +137,10 @@
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none            &none            &kp LG(LA(C))           &kp LG(LA(V))           &none                        &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
-&none  &mt LCTRL LG(Z)  &mt LSHFT LG(X)  &mt LALT LG(C)          &mt LCMD LG(V)          &kp LG(TAB)           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
-&none  &kp LG(LS(Z))    &none            &mt LS(LALT) LG(LS(C))  &mt LS(LCMD) LG(LS(V))  &none        &none           &none         &none     &none             &none         &none              &none          &none
-                                         &none                   &none                   &none                                      &none     &none             &none
+&none  &none  &none            &none             &kp LG(LA(V))   &kp LG(LA(C))                   &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
+&none  &none  &mt LCTRL LG(X)  &mt LSHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
+&none  &none  &none            &kp LG(LS(Z))     &kp LG(LS(V))   &kp LG(LS(C))   &none           &none         &none     &none             &none         &none              &none          &none
+                               &none             &none           &none                                         &none     &none             &none
             >;
         };
 
@@ -156,10 +156,10 @@
 
         Number {
             bindings = <
-&none  &none      &none       &none     &none     &none                  &none         &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH     &none
-&none  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &none           &none  &none  &none  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK  &none
-&none  &none      &none       &none     &none     &none  &none           &none         &kp N0     &kp N1  &kp N2  &kp N3  &none         &none
-                              &none     &none     &none                                &none      &none   &none
+&none      &none       &none     &none     &none  &none                  &none         &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH     &none
+&kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &none  &none           &none  &none  &none  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK  &none
+&none      &none       &none     &none     &none  &none  &none           &none         &kp N0     &kp N1  &kp N2  &kp N3  &none         &none
+                                 &none     &none  &none                                &none      &none   &none
             >;
 
             label = "num";
