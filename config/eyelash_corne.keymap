@@ -138,7 +138,7 @@
             display-name = "nav";
             bindings = <
 &none  &none            &none            &kp LG(LA(C))           &kp LG(LA(V))           &none                        &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
-&none  &mt LCTRL LG(Z)  &mt LSHFT LG(X)  &mt LALT LG(C)          &mt LCMD LG(V)          &kp LA(TAB)           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
+&none  &mt LCTRL LG(Z)  &mt LSHFT LG(X)  &mt LALT LG(C)          &mt LCMD LG(V)          &kp LG(TAB)           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
 &none  &kp LG(LS(Z))    &none            &mt LS(LALT) LG(LS(C))  &mt LS(LCMD) LG(LS(V))  &none        &none           &none         &none     &none             &none         &none              &none          &none
                                          &none                   &none                   &none                                      &none     &none             &none
             >;
