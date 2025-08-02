@@ -53,9 +53,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Alt+C
-  - Gui+Alt+V
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Alt+V
+  - Gui+Alt+C
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - HOME
   - {t: '[', s: '{'}
@@ -64,11 +64,11 @@ layers:
   - PgUp
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Z, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: X, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-command$$'}
-  - Gui+$$mdi:keyboard-tab$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: X, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -79,11 +79,11 @@ layers:
   - PgDn
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Gui+Sft+Z
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Gui+Sft+C, h: 'Sft+$$mdi:apple-keyboard-option$$'}
-  - {t: Gui+Sft+V, h: 'Sft+$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Sft+V
+  - Gui+Sft+C
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -161,11 +161,11 @@ layers:
   - {t: '9', s: (}
   - {t: /, s: '?'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
