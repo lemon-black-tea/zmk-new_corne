@@ -115,7 +115,7 @@
         toggle-ug {
             bindings = <&tog 5>;
             key-positions = <42 47>;
-            layers = <5>;
+            layers = <0 5>;
         };
     };
 
@@ -125,53 +125,53 @@
         Base {
             display-name = "base";
             bindings = <
-&none  &kp Q        &kp W         &kp F           &kp P        &kp B                                           &none         &kp J                            &kp L            &kp U         &kp Y        &kp DOUBLE_QUOTES  &none
-&none  &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T   &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N       &mt RALT E    &mt RSHFT I  &mt RCTRL O        &none
-&none  &kp Z        &kp X         &kp C           &kp D        &kp V                           &none           &none         &kp K                            &kp H            &kp COMMA     &kp PERIOD   &kp APOSTROPHE     &none
-                                  &lt 3 ESCAPE    &lt 2 SPACE  &lt 1 TAB                                                     &lt 1 RETURN                     &lt 2 BACKSPACE  &lt 4 DELETE
+&none  &kp Q        &kp W         &kp F           &kp P        &kp B                                           &none         &kp J                            &kp L            &kp U       &kp Y        &kp DOUBLE_QUOTES  &none
+&none  &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T   &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N       &mt RALT E  &mt RSHFT I  &mt RCTRL O        &none
+&none  &kp Z        &kp X         &kp C           &kp D        &kp V                           &none           &none         &kp K                            &kp H            &kp COMMA   &kp PERIOD   &kp APOSTROPHE     &none
+                                  &kp ESCAPE      &lt 1 SPACE  &lt 3 TAB                                                     &lt 4 RETURN                     &lt 2 BACKSPACE  &kp DELETE
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        Navigation {
-            display-name = "nav";
-            bindings = <
-&none  &none  &none            &none             &kp LG(LA(V))   &kp LG(LA(C))                   &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
-&none  &none  &mt LCTRL LG(X)  &mt LSHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)           &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
-&none  &none  &none            &kp LG(LS(Z))     &kp LG(LS(V))   &kp LG(LS(C))   &none           &none         &none     &none             &none         &none              &none          &none
-                               &none             &none           &none                                         &none     &none             &none
-            >;
-        };
-
-        Symbol {
-            label = "sym";
-            bindings = <
-&none  &kp CARET           &kp PERCENT          &kp AMPERSAND   &kp AT_SIGN       &none                                 &none         &none                  &kp GRAVE          &kp PIPE           &kp HASH               &kp DOLLAR             &none
-&none  &mt LCTRL QUESTION  &mt LSHIFT ASTERISK  &mt LALT EQUAL  &mt LGUI PLUS     &kp COLON                      &none  &none  &none  &kp SEMICOLON          &mt RGUI MINUS     &mt RALT TILDE     &mt RSHIFT UNDERSCORE  &mt RCTRL EXCLAMATION  &none
-&none  &kp SLASH           &kp LESS_THAN        &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &none           &none         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE    &kp GREATER_THAN       &kp BACKSLASH          &none
-                                                &none           &kp SPACE         &none                                               &kp F12                &kp LG(SPACE)      &kp LA(LC(SPACE))
-            >;
-        };
-
         Number {
             bindings = <
-&none      &none       &none     &none     &none  &none                  &none         &kp MINUS  &kp N7  &kp N8  &kp N9  &kp SLASH     &none
-&kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &none  &none           &none  &none  &none  &kp PLUS   &kp N4  &kp N5  &kp N6  &kp ASTERISK  &none
-&none      &none       &none     &none     &none  &none  &none           &none         &kp N0     &kp N1  &kp N2  &kp N3  &none         &none
-                                 &none     &none  &none                                &none      &none   &none
+&none  &none      &none       &none     &none     &none                  &none         &kp MINUS  &kp N7         &kp N8             &kp N9  &kp SLASH     &none
+&none  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &none           &none  &none  &none  &kp PLUS   &kp N4         &kp N5             &kp N6  &kp ASTERISK  &none
+&none  &none      &none       &none     &none     &none  &none           &none         &kp N0     &kp N1         &kp N2             &kp N3  &none         &none
+                              &none     &none     &none                                &kp F12    &kp LG(SPACE)  &kp LA(LC(SPACE))
             >;
 
             label = "num";
         };
 
+        Symbol {
+            label = "sym";
+            bindings = <
+&none  &kp CARET           &kp PERCENT          &kp AMPERSAND   &kp AT_SIGN       &none                                 &none         &none                  &kp GRAVE          &kp PIPE         &kp HASH               &kp DOLLAR             &none
+&none  &mt LCTRL QUESTION  &mt LSHIFT ASTERISK  &mt LALT EQUAL  &mt LGUI PLUS     &kp COLON                      &none  &none  &none  &kp SEMICOLON          &mt RGUI MINUS     &mt RALT TILDE   &mt RSHIFT UNDERSCORE  &mt RCTRL EXCLAMATION  &none
+&none  &kp SLASH           &kp LESS_THAN        &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &none           &none         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN       &kp BACKSLASH          &none
+                                                &none           &kp SPACE         &none                                               &none                  &none              &none
+            >;
+        };
+
+        Navigation {
+            display-name = "nav";
+            bindings = <
+&none  &none      &none                 &kp LG(LA(V))             &kp LG(LA(C))           &none                          &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
+&none  &kp LCTRL  &mt LEFT_SHIFT LG(Z)  &mt LALT LG(V)            &mt LCMD LG(C)          &kp LG(X)               &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
+&none  &none      &kp LG(LS(Z))         &mt LA(LSHIFT) LG(LS(V))  &mt LS(LCMD) LG(LS(C))  &kp LG(LS(X))  &none           &none         &none     &none             &none         &none              &none          &none
+                                        &none                     &none                   &none                                        &none     &none             &none
+            >;
+        };
+
         Control {
             label = "con";
             bindings = <
-&rgb_ug RGB_TOG  &none  &kp C_PREV            &kp C_NEXT            &kp C_PLAY_PAUSE  &none                  &none         &none  &none  &none  &none  &none  &none
-&bt BT_CLR_ALL   &none  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp C_MUTE        &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
-&bootloader      &none  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LG(LC(Q))     &none  &none           &none         &none  &none  &none  &none  &none  &bootloader
-                                              &tog 5                &none             &none                                &none  &none  &none
+&rgb_ug RGB_TOG  &none  &kp LG(LC(Q))  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none                  &none         &none  &none  &none  &none  &none  &none
+&bt BT_CLR_ALL   &none  &kp C_MUTE     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&bootloader      &none  &kp C_PP       &kp C_PREV            &kp C_NEXT            &none  &none           &none         &none  &none  &none  &none  &none  &bootloader
+                                       &none                 &none                 &none                                &none  &none  &none
             >;
         };
 
