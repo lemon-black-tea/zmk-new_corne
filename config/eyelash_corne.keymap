@@ -93,6 +93,16 @@
             #binding-cells = <0>;
             bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_SAD>;
         };
+
+        plus_to_equal: plus_to_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_TO_EQUAL";
+            bindings = <&kp PLUS>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -136,10 +146,10 @@
 
         Number {
             bindings = <
-&none  &none      &none       &none     &none     &none                  &none         &kp MINUS  &kp N7         &kp N8             &kp N9  &kp SLASH     &none
-&none  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &none           &none  &none  &none  &kp PLUS   &kp N4         &kp N5             &kp N6  &kp ASTERISK  &none
-&none  &none      &none       &none     &none     &none  &none           &none         &kp N0     &kp N1         &kp N2             &kp N3  &none         &none
-                              &none     &none     &none                                &kp F12    &kp LG(SPACE)  &kp LA(LC(SPACE))
+&none  &none      &none       &none     &none     &none                  &none         &kp MINUS       &kp N7         &kp N8             &kp N9  &kp SLASH     &none
+&none  &kp LCTRL  &kp LSHIFT  &kp LALT  &kp LCMD  &none           &none  &none  &none  &plus_to_equal  &kp N4         &kp N5             &kp N6  &kp ASTERISK  &none
+&none  &none      &none       &none     &none     &none  &none           &none         &kp N0          &kp N1         &kp N2             &kp N3  &none         &none
+                              &none     &none     &none                                &kp F12         &kp LG(SPACE)  &kp LA(LC(SPACE))
             >;
 
             label = "num";
