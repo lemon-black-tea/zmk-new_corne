@@ -97,7 +97,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F12
   - {t: '0', s: )}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - .
   sym:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - ^
