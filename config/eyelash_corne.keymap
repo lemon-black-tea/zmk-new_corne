@@ -13,87 +13,8 @@
 
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
-&msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
-};
-
-&mmv {
-    time-to-max-speed-ms = <500>;
-    acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
-};
-
 / {
     behaviors {
-        home_pgup: home_pgup {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp HOME>, <&kp PAGE_UP>;
-
-            label = "HOME_PGUP";
-        };
-
-        end_pgdown: end_pgdown {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp END>, <&kp PAGE_DOWN>;
-
-            label = "END_PGDOWN";
-        };
-
-        prev_vdown: prev_vdown {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PREV_VDOWN";
-            #binding-cells = <0>;
-            bindings = <&kp C_PREV>, <&kp C_VOLUME_DOWN>;
-        };
-
-        next_vup: next_vup {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEXT_VUP";
-            #binding-cells = <0>;
-            bindings = <&kp C_NEXT>, <&kp C_VOLUME_UP>;
-        };
-
-        pause_mute: pause_mute {
-            compatible = "zmk,behavior-tap-dance";
-            label = "PAUSE_MUTE";
-            #binding-cells = <0>;
-            bindings = <&kp C_PLAY_PAUSE>, <&kp C_MUTE>;
-        };
-
-        searchFiles_clipboard: searchFiles_clipboard {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEARCHFILES_CLIPBOARD";
-            #binding-cells = <0>;
-            bindings = <&kp LS(SPACE)>, <&kp LG(LA(LC(PERIOD)))>;
-        };
-
-        searchMenu_IME: searchMenu_IME {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SEARCHMENU_IME";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(LC(SPACE)))>, <&kp LA(LC(SPACE))>;
-        };
-
-        ug_hue_sat_up: ug_hue_sat_up {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UG_HUE_SAT_UP";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_SAI>;
-        };
-
-        ug_hue_sat_dn: ug_hue_sat_dn {
-            compatible = "zmk,behavior-tap-dance";
-            label = "UG_HUE_SAT_DN";
-            #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUD>, <&rgb_ug RGB_SAD>;
-        };
-
         plus_to_equal: plus_to_equal {
             compatible = "zmk,behavior-mod-morph";
             label = "PLUS_TO_EQUAL";
@@ -103,20 +24,13 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
-    };
 
-    rgb_encoder: rgb_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-    };
-
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDERSCORE BACKSPACE DELETE>;
+        };
     };
 
     combos {
@@ -126,6 +40,11 @@
             bindings = <&tog 5>;
             key-positions = <42 47>;
             layers = <0 5>;
+        };
+
+        double_shift {
+            bindings = <&caps_word>;
+            key-positions = <15 25>;
         };
     };
 
