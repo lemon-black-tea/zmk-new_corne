@@ -45,6 +45,7 @@
         double_shift {
             bindings = <&caps_word>;
             key-positions = <15 25>;
+            layers = <0>;
         };
     };
 
