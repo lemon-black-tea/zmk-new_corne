@@ -298,3 +298,5 @@ combos:
 - p: [42, 47]
   k: {t: ug, h: toggle}
   l: [base, ug]
+- p: [15, 25]
+  k: $$mdi:alpha-w-box$$
