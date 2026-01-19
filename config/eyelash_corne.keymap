@@ -15,6 +15,26 @@
 
 / {
     behaviors {
+        // left thumb key 1
+        esc_f12: esc_f12 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_F12";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp F12>;
+
+            mods = <(MOD_LGUI)>;
+        };
+
+        layer_esc_f12: layer_esc_f12 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_ESC_F12";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&esc_f12>;
+
+            tapping-term-ms = <200>;
+        };
+
+        // left thumb key 2
         bspc_cmdTab: backspace_cmdTab {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_CMDTAB";
@@ -32,6 +52,17 @@
             bindings = <&mo>, <&bspc_cmdTab>;
 
             tapping-term-ms = <200>;
+        };
+
+        // left thumb key 3
+        del_cmdSpace: backspace_cmdSpace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DELETE_CMDSPACE";
+            #binding-cells = <0>;
+            bindings = <&kp DELETE>, <&kp SPACE>;
+
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
         plus_to_equal: plus_to_equal {
@@ -84,7 +115,7 @@
 &repeat  &kp Q        &kp W         &kp F           &kp P                   &kp B                                           &none         &kp J                            &kp L        &kp U       &kp Y        &kp DOUBLE_QUOTES  &none
 &none    &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T              &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N   &mt RALT E  &mt RSHFT I  &mt RCTRL O        &none
 &none    &kp Z        &kp X         &kp C           &kp D                   &kp V                           &none           &none         &kp K                            &kp H        &kp COMMA   &kp PERIOD   &kp APOSTROPHE     &none
-                                    &kp DELETE      &layer_bspc_cmdTab 1 0  &lt 2 ESC                                                     &lt 4 RETURN                     &lt 3 SPACE  &kp TAB
+                                    &del_cmdSpace   &layer_bspc_cmdTab 1 0  &layer_esc_f12 2 0                                            &lt 4 RETURN                     &lt 3 SPACE  &kp TAB
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
