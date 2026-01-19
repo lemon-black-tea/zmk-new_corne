@@ -43,9 +43,9 @@ layers:
   - .
   - <
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace-reverse-outline$$', s: '$$mdi:keyboard-space$$'}
   - {t: '$$mdi:backspace$$', h: nav, s: '$$mdi:keyboard-tab$$'}
-  - {t: '$$mdi:keyboard-esc$$', h: num}
+  - {t: '$$mdi:keyboard-esc$$', h: num, s: F12}
   - {t: RETURN, h: con}
   - {t: '$$mdi:keyboard-space$$', h: sym}
   - $$mdi:keyboard-tab$$
