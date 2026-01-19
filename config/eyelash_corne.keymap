@@ -20,8 +20,8 @@
             label = "BACKSPACE_CMDTAB";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp TAB>;
-            mods = <(MOD_LCMD)>;
-            keep-mods = <(MOD_LCMD)>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
         layer_bspc_cmdTab: layer_bspc_cmdTab {
