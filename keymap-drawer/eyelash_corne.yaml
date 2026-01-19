@@ -44,11 +44,60 @@ layers:
   - <
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:backspace$$', h: num, s: '$$mdi:keyboard-tab$$'}
-  - {t: '$$mdi:keyboard-esc$$', h: nav}
+  - {t: '$$mdi:backspace$$', h: nav, s: '$$mdi:keyboard-tab$$'}
+  - {t: '$$mdi:keyboard-esc$$', h: num}
   - {t: RETURN, h: con}
   - {t: '$$mdi:keyboard-space$$', h: sym}
   - $$mdi:keyboard-tab$$
+  nav:
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Alt+V
+  - Gui+Alt+C
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
+  - {t: '[', s: '{'}
+  - $$mdi:arrow-up-bold$$
+  - {t: ']', s: '}'}
+  - PgUp
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-control$$
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - END
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - PgDn
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+Sft+Z
+  - Gui+Sft+V
+  - Gui+Sft+C
+  - Gui+Sft+X
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:mouse-right-click-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   num:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -93,9 +142,9 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - F12
   - {t: '0', s: )}
   - .
   sym:
@@ -146,55 +195,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  nav:
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+$$mdi:apple-keyboard-shift$$
-  - Gui+Alt+V
-  - Gui+Alt+C
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - HOME
-  - {t: '[', s: '{'}
-  - $$mdi:arrow-up-bold$$
-  - {t: ']', s: '}'}
-  - PgUp
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - END
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - PgDn
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Gui+Sft+Z, h: 'Alt+$$mdi:apple-keyboard-shift$$'}
-  - Gui+Sft+V
-  - Gui+Sft+C
-  - Gui+Sft+X
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:mouse-right-click-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   con:
   - RGB TOG
