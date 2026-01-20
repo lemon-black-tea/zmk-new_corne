@@ -40,10 +40,20 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_CMDTAB";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp TAB>;
+            bindings = <&bspc_ctrlTab>, <&kp TAB>;
 
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
+        };
+
+        bspc_ctrlTab: backspace_ctrlTab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_CTRLTAB";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp TAB>;
+
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LCTRL)>;
         };
 
         layer_bspc_cmdTab: layer_bspc_cmdTab {
