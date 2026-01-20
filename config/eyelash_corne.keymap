@@ -6,7 +6,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
@@ -138,10 +137,10 @@
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none      &none                 &kp LG(LA(V))   &kp LG(LA(C))   &none                          &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
-&none  &kp LCTRL  &mt LEFT_SHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)  &kp LG(X)               &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
-&none  &none      &kp LG(LS(Z))         &kp LG(LS(V))   &kp LG(LS(C))   &kp LG(LS(X))  &none           &none         &none     &mkp LCLK         &none         &mkp RCLK          &none          &none
-                                        &none           &none           &none                                        &none     &none             &none
+&none  &none      &none                 &kp LG(LA(V))   &kp LG(LA(C))   &none                          &none         &none  &none     &kp UP_ARROW  &none      &none  &none
+&none  &kp LCTRL  &mt LEFT_SHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)  &kp LG(X)               &none  &none  &none  &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
+&none  &none      &kp LG(LS(Z))         &kp LG(LS(V))   &kp LG(LS(C))   &kp LG(LS(X))  &none           &none         &none  &none     &none         &none      &none  &none
+                                        &none           &none           &none                                        &none  &none     &none
             >;
         };
 
