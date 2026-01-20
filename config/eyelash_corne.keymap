@@ -137,10 +137,10 @@
         Navigation {
             display-name = "nav";
             bindings = <
-&none  &none      &none                 &kp LG(LA(V))   &kp LG(LA(C))   &none                          &none         &none  &none     &kp UP_ARROW  &none      &none  &none
-&none  &kp LCTRL  &mt LEFT_SHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)  &kp LG(X)               &none  &none  &none  &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
-&none  &none      &kp LG(LS(Z))         &kp LG(LS(V))   &kp LG(LS(C))   &kp LG(LS(X))  &none           &none         &none  &none     &none         &none      &none  &none
-                                        &none           &none           &none                                        &none  &none     &none
+&none  &kp PAGE_UP     &kp PAGE_DOWN         &kp LG(LS(LEFT_BRACKET))   &kp LG(LS(RIGHT_BRACKET))   &kp LG(LA(I))                  &none         &none  &none     &kp UP_ARROW  &none      &none  &none
+&none  &mt LCTRL HOME  &mt LEFT_SHIFT LG(W)  &mt LALT LG(LEFT_BRACKET)  &mt LCMD LG(RIGHT_BRACKET)  &kp LG(LS(X))           &none  &none  &none  &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
+&none  &kp END         &kp LG(LS(T))         &kp LG(LS(S))              &kp LG(LS(R))               &kp LA(P)      &none           &none         &none  &none     &none         &none      &none  &none
+                                             &none                      &none                       &none                                        &none  &none     &none
             >;
         };
 
