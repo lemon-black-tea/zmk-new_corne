@@ -40,10 +40,9 @@
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_CTRLTAB";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp TAB>;
+            bindings = <&kp BACKSPACE>, <&ctrlTab>;
 
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LCTL)>;
         };
 
         bspc_cmdTab: backspace_cmdTab {
