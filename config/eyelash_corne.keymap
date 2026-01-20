@@ -118,6 +118,15 @@
         };
     };
 
+    macros {
+        ctrlTab: ctrlTab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "CTRLTAB";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
