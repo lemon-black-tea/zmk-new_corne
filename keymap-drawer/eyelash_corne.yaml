@@ -100,11 +100,11 @@ layers:
   - .
   nav:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Alt+V
-  - Gui+Alt+C
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - PgUp
+  - PgDn
+  - {t: 'Gui+Sft+[', s: 'Gui+Sft+{'}
+  - {t: 'Gui+Sft+]', s: 'Gui+Sft+}'}
+  - Gui+Alt+I
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -113,11 +113,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:apple-keyboard-control$$
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: V, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: C, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: X, h: '$$mdi:apple-keyboard-command$$'}
+  - {t: HOME, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Gui+W, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: 'Gui+[', h: '$$mdi:apple-keyboard-option$$', s: 'Gui+{'}
+  - {t: 'Gui+]', h: '$$mdi:apple-keyboard-command$$', s: 'Gui+}'}
+  - Gui+Sft+X
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -128,11 +128,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - Gui+Sft+Z
-  - Gui+Sft+V
-  - Gui+Sft+C
-  - Gui+Sft+X
+  - END
+  - Gui+Sft+T
+  - Gui+Sft+S
+  - Gui+Sft+R
+  - Alt+P
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
