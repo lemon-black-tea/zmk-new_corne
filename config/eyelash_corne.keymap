@@ -36,16 +36,6 @@
 
         // left thumb key 2
 
-        bspc_cmdTab: backspace_cmdTab {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_CMDTAB";
-            #binding-cells = <0>;
-            bindings = <&bspc_ctrlTab>, <&kp TAB>;
-
-            mods = <(MOD_LGUI)>;
-            keep-mods = <(MOD_LGUI)>;
-        };
-
         bspc_ctrlTab: backspace_ctrlTab {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_CTRLTAB";
@@ -54,6 +44,16 @@
 
             mods = <(MOD_LALT)>;
             keep-mods = <(MOD_LCTRL)>;
+        };
+
+        bspc_cmdTab: backspace_cmdTab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_CMDTAB";
+            #binding-cells = <0>;
+            bindings = <&bspc_ctrlTab>, <&kp TAB>;
+
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
         };
 
         layer_bspc_cmdTab: layer_bspc_cmdTab {
