@@ -43,7 +43,7 @@
             bindings = <&kp BACKSPACE>, <&kp TAB>;
 
             mods = <(MOD_LALT)>;
-            keep-mods = <(MOD_LCTRL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
 
         bspc_cmdTab: backspace_cmdTab {
