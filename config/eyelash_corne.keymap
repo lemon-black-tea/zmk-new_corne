@@ -16,6 +16,7 @@
 / {
     behaviors {
         // left thumb key 1
+
         esc_f12: esc_f12 {
             compatible = "zmk,behavior-mod-morph";
             label = "ESC_F12";
@@ -35,6 +36,7 @@
         };
 
         // left thumb key 2
+
         bspc_cmdTab: backspace_cmdTab {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_CMDTAB";
@@ -55,6 +57,7 @@
         };
 
         // left thumb key 3
+
         del_cmdSpace: backspace_cmdSpace {
             compatible = "zmk,behavior-mod-morph";
             label = "DELETE_CMDSPACE";
@@ -121,16 +124,6 @@
             // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        Navigation {
-            display-name = "nav";
-            bindings = <
-&none  &none      &none                 &kp LG(LA(V))   &kp LG(LA(C))   &none                          &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
-&none  &kp LCTRL  &mt LEFT_SHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)  &kp LG(X)               &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
-&none  &none      &kp LG(LS(Z))         &kp LG(LS(V))   &kp LG(LS(C))   &kp LG(LS(X))  &none           &none         &none     &mkp LCLK         &none         &mkp RCLK          &none          &none
-                                        &none           &none           &none                                        &none     &none             &none
-            >;
-        };
-
         Number {
             bindings = <
 &none  &none      &none       &none     &none     &none                  &none         &kp MINUS       &kp N7  &kp N8      &kp N9  &kp SLASH     &none
@@ -140,6 +133,16 @@
             >;
 
             label = "num";
+        };
+
+        Navigation {
+            display-name = "nav";
+            bindings = <
+&none  &none      &none                 &kp LG(LA(V))   &kp LG(LA(C))   &none                          &none         &kp HOME  &kp LEFT_BRACKET  &kp UP_ARROW  &kp RIGHT_BRACKET  &kp PAGE_UP    &none
+&none  &kp LCTRL  &mt LEFT_SHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)  &kp LG(X)               &none  &none  &none  &kp END   &kp LEFT          &kp DOWN      &kp RIGHT          &kp PAGE_DOWN  &none
+&none  &none      &kp LG(LS(Z))         &kp LG(LS(V))   &kp LG(LS(C))   &kp LG(LS(X))  &none           &none         &none     &mkp LCLK         &none         &mkp RCLK          &none          &none
+                                        &none           &none           &none                                        &none     &none             &none
+            >;
         };
 
         Symbol {
