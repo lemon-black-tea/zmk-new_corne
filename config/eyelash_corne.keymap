@@ -4,97 +4,193 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
-#include <behaviors/runtime-sensor-rotate.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&soft_off { hold-time-ms = <2000>; };
+&mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
+
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 / {
     behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
+        // left thumb key 1
+
+        esc_f12: esc_f12 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_F12";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+            bindings = <&kp ESC>, <&kp F12>;
+
+            mods = <(MOD_LGUI)>;
         };
 
-        rsr_vol: rsr_vol {
-            compatible = "zmk,behavior-runtime-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            tap-ms = <5>;
-            cw-binding = <&kp C_VOL_UP>;
-            ccw-binding = <&kp C_VOL_DN>;
+        layer_esc_f12: layer_esc_f12 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_ESC_F12";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&esc_f12>;
+
+            tapping-term-ms = <200>;
         };
 
-        rsr_trans: rsr_trans {
-            compatible = "zmk,behavior-runtime-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            tap-ms = <0>;
+        // left thumb key 2
+
+        bspc_ctrlTab: backspace_ctrlTab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_CTRLTAB";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&ctrlTab>;
+
+            mods = <(MOD_LALT)>;
+        };
+
+        bspc_cmdTab: backspace_cmdTab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_CMDTAB";
+            #binding-cells = <0>;
+            bindings = <&bspc_ctrlTab>, <&kp TAB>;
+
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+
+        layer_bspc_cmdTab: layer_bspc_cmdTab {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_BACKSPACE_CMDTAB";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&bspc_cmdTab>;
+
+            tapping-term-ms = <200>;
+        };
+
+        // left thumb key 3
+
+        del_cmdSpace: backspace_cmdSpace {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DELETE_CMDSPACE";
+            #binding-cells = <0>;
+            bindings = <&kp DELETE>, <&kp SPACE>;
+
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+
+        plus_to_equal: plus_to_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PLUS_TO_EQUAL";
+            bindings = <&kp PLUS>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
+
+        caps_word: caps_word {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD";
+            #binding-cells = <0>;
+            continue-list = <A B C D E F G H I J K L M N O P Q R S T U V W X Y Z UNDERSCORE BACKSPACE DELETE>;
+        };
+
+        repeat: repeat {
+            compatible = "zmk,behavior-key-repeat";
+            label = "REPEAT";
+            #binding-cells = <0>;
+            usage-pages = <HID_USAGE_KEY HID_USAGE_CONSUMER>;
         };
     };
 
-   combos {
+    combos {
         compatible = "zmk,combos";
 
-        softoff {
-            bindings = <&soft_off>;
-            key-positions = <1 15 29>;
+        toggle-ug {
+            bindings = <&tog 5>;
+            key-positions = <42 47>;
+            layers = <0 5>;
+        };
+
+        double_shift {
+            bindings = <&caps_word>;
+            key-positions = <15 25>;
+            layers = <0>;
+        };
+    };
+
+    macros {
+        ctrlTab: ctrlTab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(TAB)>;
+            label = "CTRLTAB";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
-            display-name = "QWERTY";
+        Base {
+            display-name = "base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T                               &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&td0       &kp A  &kp S  &kp D     &kp F  &kp G                     &kp LEFT  &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp SPACE              &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
+&repeat  &kp Q        &kp W         &kp F           &kp P                   &kp B                                           &none         &kp J                            &kp L        &kp U       &kp Y        &kp DOUBLE_QUOTES  &none
+&none    &mt LCTRL A  &mt LSHIFT R  &mt LEFT_ALT S  &mt LCMD T              &mt LG(LA(LS(LEFT_CONTROL))) G           &none  &none  &none  &mt RG(RA(RS(RIGHT_CONTROL))) M  &mt RCMD N   &mt RALT E  &mt RSHFT I  &mt RCTRL O        &none
+&none    &kp Z        &kp X         &kp C           &kp D                   &kp V                           &none           &none         &kp K                            &kp H        &kp COMMA   &kp PERIOD   &kp APOSTROPHE     &none
+                                    &del_cmdSpace   &layer_bspc_cmdTab 1 0  &layer_esc_f12 2 0                                            &lt 4 RETURN                     &lt 3 SPACE  &kp TAB
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            // sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        lower_layer {
-            display-name = "NUMBER";
+        Number {
             bindings = <
-&trans  &kp N1           &kp N2          &kp N3        &kp N4        &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
-&trans  &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &trans        &rgb_ug RGB_EFF  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFR  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
-                                         &trans        &trans        &trans                                                                          &kp INS          &kp DEL          &trans
+&none  &none      &none             &kp LG(LA(V))   &kp LG(LA(C))   &none                      &none         &kp MINUS       &kp N7  &kp N8      &kp N9  &kp SLASH     &none
+&none  &kp LCTRL  &mt LSHIFT LG(Z)  &mt LALT LG(V)  &mt LCMD LG(C)  &kp LG(X)           &none  &none  &none  &plus_to_equal  &kp N4  &kp N5      &kp N6  &kp ASTERISK  &none
+&none  &none      &kp LG(LS(Z))     &kp LG(LS(V))   &kp LG(LS(C))   &none      &none           &none         &none           &kp N1  &kp N2      &kp N3  &none         &none
+                                    &none           &none           &none                                    &none           &kp N0  &kp PERIOD
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            label = "num";
         };
 
-        raise_layer {
-            display-name = "SYMBOL";
+        Navigation {
+            display-name = "nav";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&none  &kp PAGE_UP     &kp PAGE_DOWN         &kp LG(LS(LEFT_BRACKET))   &kp LG(LS(RIGHT_BRACKET))   &kp LG(LA(I))                  &none         &none  &none     &kp UP_ARROW  &none      &none  &none
+&none  &mt LCTRL HOME  &mt LEFT_SHIFT LG(W)  &mt LALT LG(LEFT_BRACKET)  &mt LCMD LG(RIGHT_BRACKET)  &kp LG(LS(X))           &none  &none  &none  &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none  &none
+&none  &kp END         &kp LG(LS(T))         &kp LG(LS(S))              &kp LG(LS(R))               &kp LA(P)      &none           &none         &none  &none     &none         &none      &none  &none
+                                             &none                      &none                       &none                                        &none  &none     &none
             >;
-
-            sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        layer_3 {
-            display-name = "Fn";
+        Symbol {
+            label = "sym";
             bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                                  &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &kp C_MUTE                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                                   &trans       &trans     &trans
+&none  &kp CARET           &kp AMPS          &kp ASTERISK    &kp HASH          &none                                 &none         &none                  &kp AT             &kp GRAVE        &kp PIPE              &kp DOLLAR             &none
+&none  &mt LCTRL QUESTION  &mt LSHIFT COLON  &mt LALT EQUAL  &mt LGUI PLUS     &kp PERCENT                    &none  &none  &none  &kp UNDER              &mt RGUI MINUS     &mt RALT TILDE   &mt RSHIFT SEMICOLON  &mt RCTRL EXCLAMATION  &none
+&none  &kp SLASH           &kp LESS_THAN     &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &none           &none         &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp GREATER_THAN      &kp BACKSLASH          &none
+                                             &none           &kp SPACE         &none                                               &none                  &none              &none
+            >;
+        };
+
+        Control {
+            label = "con";
+            bindings = <
+&rgb_ug RGB_TOG  &none  &kp LG(LC(Q))  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none                  &none         &none  &none  &none  &none  &none  &none
+&bt BT_CLR_ALL   &none  &kp C_MUTE     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&bootloader      &none  &kp C_PP       &kp C_PREV            &kp C_NEXT            &none  &none           &none         &none  &none  &none  &none  &none  &bootloader
+                                       &none                 &none                 &none                                &none  &none  &none
+            >;
+        };
+
+        Underglow {
+            bindings = <
+&rgb_ug RGB_TOG  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF                  &none         &none  &none  &none  &none  &none  &none
+&none            &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFR           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none            &none            &none            &none            &none            &none            &none           &none         &none  &none  &none  &none  &none  &none
+                                                   &none            &none            &none                                          &none  &none  &none
             >;
 
-            sensor-bindings = <&rsr_vol &rsr_trans>;
+            label = "ug";
         };
     };
 };
